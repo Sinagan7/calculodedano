@@ -19,6 +19,7 @@ import java.awt.Choice;
 import javax.swing.JFormattedTextField;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
+import javax.swing.SpinnerNumberModel;
 
 public class aplicaciongrafica extends JFrame {
 
@@ -149,5 +150,19 @@ public class aplicaciongrafica extends JFrame {
 		lblArma.setFont(new Font("Trebuchet MS", Font.ITALIC, 15));
 		lblArma.setBounds(57, 209, 170, 26);
 		contentPane.add(lblArma);
+
+		JSpinner absorcionBase = new JSpinner();
+		absorcionBase.setModel(new SpinnerNumberModel(new Integer(20), null, null, new Integer(1)));
+		absorcionBase.setFont(new Font("Bookman Old Style", Font.ITALIC, 14));
+		absorcionBase.setBounds(315, 320, 143, 26);
+		contentPane.add(absorcionBase);
+
+		JLabel lblAbsorcionBase = new JLabel("Absorci\u00F3n Base:");
+		lblAbsorcionBase.setLabelFor(absorcionBase);
+		lblAbsorcionBase.setHorizontalAlignment(SwingConstants.LEFT);
+		lblAbsorcionBase.setForeground(Color.WHITE);
+		lblAbsorcionBase.setFont(new Font("Trebuchet MS", Font.ITALIC, 15));
+		lblAbsorcionBase.setBounds(297, 283, 170, 26);
+		contentPane.add(lblAbsorcionBase);
 	}
 }
